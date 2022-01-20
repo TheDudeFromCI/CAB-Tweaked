@@ -1038,7 +1038,6 @@ function unify(event) {
 		event.recipes.createCutting([Item.of(mod + ":" + slab, 2)], mod + ":" + planks).processingTime(50)
 	}
 
-	woodcutting("architects_palette", "twisted_log", "twisted_planks", "twisted_slab")
 	woodcutting("tconstruct", "greenheart_log", "greenheart_planks", "greenheart_planks_slab")
 	woodcutting("tconstruct", "skyroot_log", "skyroot_planks", "skyroot_planks_slab")
 	woodcutting("tconstruct", "bloodshroom_log", "bloodshroom_planks", "bloodshroom_planks_slab")
