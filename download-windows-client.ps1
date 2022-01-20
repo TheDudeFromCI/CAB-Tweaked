@@ -1,26 +1,35 @@
-if (Test-Path \.mods) {
-    Remove-Item \.mods -Force
+Write-Output "Clearing existing mod folder."
+if (Test-Path -Path .\mods) {
+    Remove-Item .\mods -Force -Confirm:$false
 }
+New-Item -Path .\mods -ItemType Directory
 
-if (Test-Path \.resourcepacks) {
-    Remove-Item \.resourcepacks -Force
+Write-Output "Clearing existing resource pack folder."
+if (Test-Path -Path .\resourcepacks) {
+    Remove-Item .\resourcepacks -Force -Confirm:$false
 }
+New-Item -Path .\resourcepacks -ItemType Directory
 
-New-Item -Path mods -ItemType Directory
-New-Item -Path resourcepacks -ItemType Directory
-
+Write-Output "Downloading common mods..."
 foreach($url in Get-Content .\common-mods.txt) {
-    $path = ".\" + $(Split-Path -Path $url -Leaf)
+    Write-Output "Downloading $url"
+    $path = ".\mods\" + $(Split-Path -Path $url -Leaf)
     Invoke-WebRequest -Uri $url -OutFile $path
 }
+Write-Output ""
 
+Write-Output "Downloading client mods..."
 foreach($url in Get-Content .\client-mods.txt) {
-    $path = ".\mods" + $(Split-Path -Path $url -Leaf)
+    Write-Output "Downloading $url"
+    $path = ".\mods\" + $(Split-Path -Path $url -Leaf)
     Invoke-WebRequest -Uri $url -OutFile $path
 }
+Write-Output ""
 
+Write-Output "Downloading resource packs..."
 foreach($url in Get-Content .\client-resourcepacks.txt) {
-    $path = ".\resourcepacks" + $(Split-Path -Path $url -Leaf)
+    Write-Output "Downloading $url"
+    $path = ".\resourcepacks\" + $(Split-Path -Path $url -Leaf)
     Invoke-WebRequest -Uri $url -OutFile $path
 }
 
