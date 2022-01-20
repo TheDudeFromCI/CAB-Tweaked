@@ -159,7 +159,6 @@ onEvent('item.registry', event => {
 		{ in: MC('dragon_breath'), out: S(1) },
 		{ in: MC('ghast_tear'), out: S(10) },
 		{ in: MC('dragon_egg'), out: G(2) },
-		{ in: RQ('guardian_spike'), out: S(6) }
 	])
 
 	profession("Cooking", 0xD8B384, 0xF7DAD9, [

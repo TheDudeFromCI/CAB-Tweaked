@@ -140,11 +140,11 @@ key_key.enderlaunch.desc:key.mouse.left
 key_key.rocket.desc:key.mouse.left
 key_key.slide.desc:key.keyboard.left.shift
 key_placebo.toggleWings:key.keyboard.keypad.8
-key_placebo.toggleTrails:key.keyboard.keypad.9
 key_Start composing:key.keyboard.g
 key_Tool Menu (Hold):key.keyboard.left.alt
 key_Piston Pushcart Up:key.keyboard.space
 key_Piston Pushcart Down:key.keyboard.left.control
+key_placebo.toggleTrails:key.keyboard.keypad.9
 key_key.corpse.death_history:key.keyboard.u
 key_Open the Crash Utilities Screen:key.keyboard.u:CONTROL
 key_Copy Container Class:key.keyboard.unknown
@@ -184,13 +184,13 @@ key_key.exchangers.fuzzy_placement_mode_toggle:key.keyboard.unknown
 key_key.exchangers.void_items_mode_toggle:key.keyboard.unknown
 key_toggle:key.keyboard.f6
 key_doubleslabs.key.toggleVerticalSlabPlacement:key.keyboard.caps.lock
-key_cos.key.opencosarmorinventory:key.keyboard.unknown
 key_mod.chiselsandbits.keys.key.modded-tool.open:key.keyboard.r
 key_mod.chiselsandbits.keys.key.modded-tool.cycle.left:key.keyboard.unknown
 key_mod.chiselsandbits.keys.key.modded-tool.cycle.right:key.keyboard.unknown
 key_mod.chiselsandbits.keys.key.measuring-tape.reset:key.mouse.right:SHIFT
 key_mod.chiselsandbits.keys.key.undo:key.keyboard.z:CONTROL
 key_mod.chiselsandbits.keys.key.redo:key.keyboard.y:CONTROL
+key_cos.key.opencosarmorinventory:key.keyboard.unknown
 key_create.keyinfo.toolmenu:key.keyboard.left.alt
 key_create.keyinfo.toolbelt:key.keyboard.left.alt
 key_keybind.sophisticatedbackpacks.open_backpack:key.keyboard.b
