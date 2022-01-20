@@ -4,13 +4,6 @@ onEvent('jei.hide.items', event => {
 	event.hide('appliedenergistics2:facade')
 })
 
-onEvent('jei.subtypes', event => {
-	event.useNBT('advancedrocketry:planet_id_chip')
-})
-
-onEvent('jei.hide.fluids', event => {
-})
-
 onEvent('jei.add.items', event => {
 	event.add('thermal:ruby')
 	event.add('thermal:ruby_dust')
@@ -20,15 +13,12 @@ onEvent('jei.add.items', event => {
 	event.add('thermal:sapphire_dust')
 	event.add('thermal:sapphire_ore')
 
-	event.add(Item.of("advancedrocketry:planet_id_chip", { dimId: "custommoon:moon", DimensionName: " The Moon " }))
-	event.add(Item.of("advancedrocketry:planet_id_chip", { dimId: "minecraft:overworld", DimensionName: " Earth " }))
-
 })
 
 onEvent('jei.remove.categories', event => {
 	event.yeetIf(element => {
 		let name = (element.getUid() + "")
-		return name.startsWith('advancedrocketry:') || name.startsWith("thermal:centrifuge")
+		return name.startsWith("thermal:centrifuge")
 	});
 })
 
@@ -60,8 +50,6 @@ onEvent('item.tooltip', tooltip => {
 	ore("minecraft:lapis_ore", 1, 32)
 	ore("minecraft:gold_ore", 1, 32)
 	ore("minecraft:diamond_ore", 1, 16)
-
-	tooltip.add("advancedrocketry:planet_id_chip", [`§3How to Use:`, `1. §7Use the Survival Mode recipes to obtain these`, `2. §7Open the UI of your Rocket`, `3. §7Click on the displayed Guidance Computer item`, `4. §7Insert chip into the empty slot`, "§8§o(Using the Planet Selection menu crashes the game)"]);
 
 	holds('copper', 5 * 9)
 	holds('iron', 6 * 9)
