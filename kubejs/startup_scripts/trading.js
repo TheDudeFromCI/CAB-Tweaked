@@ -5,7 +5,6 @@ let MOD = (domain, id, x) => (x ? `${x}x ` : "") + (id.startsWith('#') ? '#' : "
 let AE2 = (id, x) => MOD("appliedenergistics2", id, x)
 let TE = (id, x) => MOD("thermal", id, x)
 let AP = (id, x) => MOD("architects_palette", id, x)
-let LV = (id, x) => MOD("libvulpes", id, x)
 let CR = (id, x) => MOD("create", id, x)
 let TC = (id, x) => MOD("tconstruct", id, x)
 let MC = (id, x) => MOD("minecraft", id, x)
@@ -160,7 +159,6 @@ onEvent('item.registry', event => {
 		{ in: MC('dragon_breath'), out: S(1) },
 		{ in: MC('ghast_tear'), out: S(10) },
 		{ in: MC('dragon_egg'), out: G(2) },
-		{ in: RQ('guardian_spike'), out: S(6) }
 	])
 
 	profession("Cooking", 0xD8B384, 0xF7DAD9, [

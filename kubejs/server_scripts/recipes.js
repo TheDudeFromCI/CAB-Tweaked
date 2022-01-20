@@ -13,7 +13,6 @@ let MOD = (domain, id, x) => (x ? `${x}x ` : "") + (id.startsWith('#') ? '#' : "
 let AE2 = (id, x) => MOD("appliedenergistics2", id, x)
 let TE = (id, x) => MOD("thermal", id, x)
 let AP = (id, x) => MOD("architects_palette", id, x)
-let LV = (id, x) => MOD("libvulpes", id, x)
 let CR = (id, x) => MOD("create", id, x)
 let TC = (id, x) => MOD("tconstruct", id, x)
 let MC = (id, x) => MOD("minecraft", id, x)
@@ -149,8 +148,6 @@ onEvent('item.tags', event => {
 
 	event.get('randomium:blacklist')
 		.add(/.*creative.*/)
-		.add(/advancedrocketry.*/)
-		.add(/libvulpes.*/)
 		.add(/itemfilters.*/)
 		.add(/kubejs:failed_alchemy.*/)
 		.add(/ftblibrary.*/)
@@ -393,8 +390,6 @@ function unwantedRecipes(event) {
 	event.remove({ id: TE('parts/electrum_gear') })
 	event.remove({ id: AP('smelting/charcoal_block_from_logs_that_burn_smoking') })
 	event.remove({ id: 'portality:generator' })
-	event.remove({ mod: 'advancedrocketry' })
-	event.remove({ mod: 'libvulpes' })
 	event.remove({ mod: 'pipez' })
 	event.remove({ mod: 'structurescompass' })
 	event.remove({ input: TE('signalum_dust'), output: TE('signalum_ingot') })
@@ -930,147 +925,15 @@ function rocketScience(event) {
 	let machine = AE2("controller")
 	let matrix = KJ("computation_matrix")
 
-	event.recipes.createMechanicalCrafting("advancedrocketry:guidancecomputer", [
-		'AAAAA',
-		'ASSSA',
-		'GS SG',
-		'ASSSA',
-		'AAMAA'
-	], {
-		A: plastic,
-		M: machine,
-		G: gear,
-		S: matrix
-	})
-
-	event.recipes.createMechanicalCrafting("advancedrocketry:fuelingstation", [
-		'AAA',
-		'GSG',
-		'AMA'
-	], {
-		A: plastic,
-		M: machine,
-		G: gear,
-		S: MC("bucket")
-	})
-
-	event.recipes.createMechanicalCrafting("advancedrocketry:oxygenvent", [
-		'AAA',
-		'GSG',
-		'AMA'
-	], {
-		A: plastic,
-		M: machine,
-		G: gear,
-		S: CR("propeller")
-	})
-
-	event.recipes.createMechanicalCrafting("advancedrocketry:rocketassembler", [
-		'AAA',
-		'GSG',
-		'AMA'
-	], {
-		A: plastic,
-		M: machine,
-		G: gear,
-		S: CR("empty_schematic")
-	})
-
-	let pattern = [
-		' A ',
-		'GSG',
-		' A '
-	];
-
-	event.recipes.createMechanicalCrafting(Item.of("advancedrocketry:spacechest", { outputItems: [{ Slot: 0, id: "advancedrocketry:pressure_tank_high", Count: 1 }], size: 6 }), pattern,
-		{
-			A: plastic,
-			G: CR("golden_sheet"),
-			S: CR("copper_backtank")
-		})
-
-	event.recipes.createMechanicalCrafting("advancedrocketry:spacehelmet", pattern,
-		{
-			A: plastic,
-			G: CR("golden_sheet"),
-			S: CR("diving_helmet")
-		})
-
-	event.recipes.createMechanicalCrafting("advancedrocketry:spaceleggings", pattern,
-		{
-			A: plastic,
-			G: CR("golden_sheet"),
-			S: MC("iron_leggings")
-		})
-
-	event.recipes.createMechanicalCrafting("advancedrocketry:spaceboots", pattern,
-		{
-			A: plastic,
-			G: CR("golden_sheet"),
-			S: MC("iron_boots")
-		})
-
-	event.shaped("libvulpes:linker", [
-		'G',
-		'A'
-	], {
-		A: plastic,
-		G: MC("redstone_torch")
-	})
-
-	event.shaped("advancedrocketry:oxygencharger", [
-		'G',
-		'A'
-	], {
-		A: CR("fluid_pipe"),
-		G: MC("smooth_stone_slab")
-	})
-
 	let smithAndMechCraft = (r, i1, i2) => {
 		event.smithing(r, i1, i2)
 		event.recipes.createMechanicalCrafting(r, "AB", { A: i1, B: i2 })
 	}
 
-	smithAndMechCraft("advancedrocketry:seat", CR('#seats'), plastic)
-	smithAndMechCraft("advancedrocketry:fueltank", CR('fluid_tank'), plastic)
-	smithAndMechCraft("advancedrocketry:rocketmotor", CR('blaze_burner'), plastic)
-	smithAndMechCraft("5x advancedrocketry:structuretower", MC('scaffolding'), plastic)
-	smithAndMechCraft("5x advancedrocketry:launchpad", AP('heavy_stone_bricks'), plastic)
-
-	event.recipes.createMixing(
-		[Fluid.of("advancedrocketry:oxygen", 50), Fluid.of("advancedrocketry:hydrogen", 50), Item.of(CR('copper_sheet')), Item.of(KJ('zinc_sheet'))],
-		[Fluid.of(MC("water"), 100), Item.of(CR('copper_sheet')), Item.of(KJ('zinc_sheet'))]
-	).heated()
-
-	event.recipes.thermal.compression_fuel(Fluid.of("advancedrocketry:hydrogen")).energy(100000)
-	event.recipes.thermal.compression_fuel(Fluid.of("advancedrocketry:oxygen")).energy(10000)
-
 	pattern = [
 		'A',
 		'S'
 	];
-
-	event.recipes.createMechanicalCrafting({
-		item: "advancedrocketry:planet_id_chip",
-		Count: 1,
-		nbt: { dimId: "custommoon:moon", DimensionName: " The Moon " }
-	}, pattern,
-		{
-			A: AE2("#crystals/nether"),
-			S: KJ("calculation_mechanism")
-		})
-
-	event.recipes.createMechanicalCrafting({
-		item: "advancedrocketry:planet_id_chip",
-		Count: 1,
-		nbt: { dimId: "minecraft:overworld", DimensionName: " Earth " }
-	}, pattern,
-		{
-			A: AE2("#crystals/certus"),
-			S: KJ("calculation_mechanism")
-		})
-
-
 }
 
 function drawersop(event) {

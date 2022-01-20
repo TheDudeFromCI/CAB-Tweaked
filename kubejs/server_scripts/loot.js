@@ -151,7 +151,6 @@ onEvent('block.loot_tables', event => {
 
     event.addSimpleBlock('minecraft:twisting_vines', 'minecraft:twisting_vines')
     event.addSimpleBlock('minecraft:weeping_vines', 'minecraft:weeping_vines')
-    event.addSimpleBlock('advancedrocketry:moonturf', 'advancedrocketry:moonturf')
 
     // 1.17-esque Ores
     let extra_ores = ['minecraft:', 'darkerdepths:aridrock_', 'darkerdepths:limestone_']
