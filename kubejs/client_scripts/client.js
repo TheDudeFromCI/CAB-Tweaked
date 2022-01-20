@@ -2,8 +2,6 @@
 
 onEvent('jei.hide.items', event => {
 	event.hide('appliedenergistics2:facade')
-	event.hide(`#buddycards:cards`)
-	event.hide(`#buddycards:gummy_cards`)
 })
 
 onEvent('jei.subtypes', event => {
@@ -43,9 +41,7 @@ onEvent('item.tooltip', tooltip => {
 
 	tooltip.add("minecraft:redstone_ore", [`§7Does not generate, crush Cinnabar to obtain Redstone.`]);
 
-	ore("forbidden_arcanus:arcane_crystal_ore", 1, 9)
 	ore("appliedenergistics2:charged_quartz_ore", 1, 30)
-	ore("forbidden_arcanus:xpetrified_ore", 1, 30)
 	ore("appliedenergistics2:quartz_ore", 1, 30)
 	ore("thermal:apatite_ore", 1, 30)
 	ore("thermal:cinnabar_ore", 1, 30)
@@ -87,8 +83,6 @@ onEvent('item.tooltip', tooltip => {
 	// not_consumed('create:super_glue')
 	not_consumed('kubejs:chromatic_resonator')
 	not_consumed('kubejs:flash_drive')
-	// not_consumed('xreliquary:mercy_cross')
-	// not_consumed('xreliquary:ender_staff')
 
 	global.substrates[0].forEach(e => tooltip.add(e.id, [`§8Category: §7Igneous`]));
 	global.substrates[1].forEach(e => tooltip.add(e.id, [`§8Category: §7Herbal`]));
@@ -99,10 +93,6 @@ onEvent('item.tooltip', tooltip => {
 	global.substrates[6].forEach(e => tooltip.add(e.id, [`§8Category: §7Catalyst`]));
 
 	tooltip.add("structurescompass:structures_compass", [`§7Right-Click to Activate`]);
-
-	tooltip.add("magicfeather:magicfeather", [`§6Grants Creative Flight`]);
-
-	tooltip.add("xreliquary:alkahestry_tome", [`§6Cannot be used in Mechanical Crafting`]);
 
 	tooltip.add("pipez:energy_pipe", [`§7Connections may have to be`, `§7marked as §fInputs §7by sneak-clicking`, `§7the connection with a §fWrench`]);
 
@@ -148,17 +138,6 @@ onEvent('jei.information', event => {
 	event.add('kubejs:substrate_crystal', catalyst("Crystalline"))
 	event.add('kubejs:substrate_metal', catalyst("Metallurgic"))
 	event.add('kubejs:substrate_gem', catalyst("Gemstone"))
-
-	let beer = (id, igs) =>
-		event.add('drinkbeer:beer_mug' + id, ["Place 4 Empty Beer Mugs, " + igs + " in a Keg to create this Beverage."])
-
-	beer("", "3 Wheat and a Water Bucket")
-	beer("_blaze_stout", "2 Wheat, 1 Blaze Powder and a Water Bucket")
-	beer("_blaze_milk_stout", "1 Wheat, 1 Sugar, 1 Blaze Powder and a Water Bucket") //wtf are these drinks
-	beer("_apple_lambic", "2 Wheat, an Apple and a Water Bucket")
-	beer("_sweet_berry_kriek", "2 Wheat, 1 Sweet Berry and a Water Bucket")
-	beer("_haars_icey_pale_lager", "3 Wheat and a block of Blue Ice")
-	beer("_pumpkin_kvass", "2 Bread, a Pumpkin and a Water Bucket")
 
 	event.add('kubejs:substrate_chaos', catalyst("Catalyst", "Chaos Catalyst").concat([
 		" ", "§8Usage:§0", "Running the §9Chaos Catalyst§0 with any amount of one §9Reagent§0 through an §5Alchemical Laser§0 will §9transmute§0 the Reagent to another. The Transmutation Pairings are §9unique to each World§0."

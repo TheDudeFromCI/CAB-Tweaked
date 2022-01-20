@@ -37,8 +37,6 @@ onEvent('entity.spawned', event => {
 	if (!item.getId().endsWith("slime_fern"))
 		return
 	let block = entity.getBlock()
-	if (block.getId() != "occultism:spirit_fire" && block.getDown().getId() != "occultism:spirit_fire")
-		return
 	entity.setMotionX(entity.getMotionX() / 16)
 	entity.setMotionY(0.35)
 	entity.setMotionZ(entity.getMotionZ() / 16)

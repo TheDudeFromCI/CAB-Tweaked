@@ -24,13 +24,11 @@ let BOP = (id, x) => MOD("biomesoplenty", id, x)
 let PR_C = (id, x) => MOD("projectred-core", id, x)
 let PR_T = (id, x) => MOD("projectred-transmission", id, x)
 let PR_I = (id, x) => MOD("projectred-illumination", id, x)
-let RQ = (id, x) => MOD("xreliquary", id, x)
 let SD = (id, x) => MOD("storagedrawers", id, x)
 let SP = (id, x) => MOD("supplementaries", id, x)
 let F = (id, x) => MOD("forge", id, x)
 let AC = (id, x) => MOD("aquaculture", id, x)
 let PP = (id, x) => MOD("prettypipes", id, x)
-let OC = (id, x) => MOD("occultism", id, x)
 //
 
 let colours = ['white', 'orange', 'magenta', 'light_blue', 'lime', 'pink', 'purple', 'light_gray', 'gray', 'cyan', 'brown', 'green', 'blue', 'red', 'black', 'yellow']
@@ -107,8 +105,6 @@ onEvent('item.tags', event => {
 		event.get('forge:profession_cards').add(`kubejs:profession_card_${element}`)
 	});
 
-	event.get("farmersdelight:offhand_equipment").add("forbidden_arcanus:obsidian_skull_shield")
-
 	event.get("forge:raw_chicken").add("exoticbirds:raw_birdmeat")
 	event.get("forge:tools/axes").add(TC("hand_axe"))
 	event.get("forge:vines").add(MC("vine")).add(BOP("willow_vine")).add(BOP("spanish_moss"))
@@ -128,24 +124,10 @@ onEvent('item.tags', event => {
 		.add(AE2("engineering_processor_press"))
 		.add(AE2("calculation_processor_press"))
 
-	event.get("forbidden_arcanus:indestructible_blacklisted")
-		.add(/exchangers:.*/)
-		.add(/advancedrocketry:.*/)
-		.add(/xreliquary:.*/)
-		.add(/waterstrainer:.*/)
-		.add(OC("#miners/ores"))
-		.add(PR_C("draw_plate"))
-		.add(PR_C("multimeter"))
-
-	event.get("minecraft:planks").add("forbidden_arcanus:mysterywood_planks").add("forbidden_arcanus:cherrywood_planks")
-	event.get("minecraft:logs_that_burn").add("#forbidden_arcanus:mysterywood_logs").add("#forbidden_arcanus:cherrywood_logs")
-
 	event.get('forge:saws').add('cb_microblock:stone_saw').add('cb_microblock:iron_saw').add('cb_microblock:diamond_saw')
 	event.get('forge:screwdrivers').add(PR_C('screwdriver'))
 	event.get('forge:chromatic_resonators').add(KJ('chromatic_resonator'))
 	event.get('forge:flash_drives').add(KJ('flash_drive'))
-	event.get('forge:ender_staffs').add(RQ('ender_staff'))
-	event.get('forge:cross_of_mercys').add(RQ('mercy_cross'))
 	event.get('forge:super_glues').add(CR('super_glue'))
 	event.get('forge:wrenches').add(CR('wrench'))
 	event.get('forge:tools/wrench').add(CR('wrench'))
@@ -175,13 +157,10 @@ onEvent('item.tags', event => {
 		.add(/projectred-core.*/)
 		.add(/waterstrainer.*/)
 		.add(/ftbquests.*/)
-		.add(/occultism.*/)
 		.add(/tconstruct:molten_.*_bucket/)
 		.add(/pipez.*/)
-		.add(/forbidden_arcanus:edelwood.*/)
 		.add(/curios.*/)
 		.add(/metalbarrels.*/)
-		.add("forbidden_arcanus:arcane_dark_stone")
 		.add("#forge:dusts")
 		.add("cb_microblock:microblock")
 		.add("culinaryconstruct:sandwich")
@@ -337,7 +316,6 @@ onEvent('item.tags', event => {
 // Scripts
 
 function beforeNuke(event) {
-	event.replaceInput({ id: "occultism:ritual/summon_foliot_crusher" }, F("#ores/silver"), CR("zinc_ore"))
 }
 
 function unwantedRecipes(event) {
@@ -377,11 +355,6 @@ function unwantedRecipes(event) {
 	event.remove({ id: "grapplemod:magnethook" })
 	event.remove({ id: "grapplemod:rockethook" })
 	event.remove({ id: "randomium:duplicate" })
-	event.remove({ id: "forbidden_arcanus:eternal_stella" })
-	event.remove({ id: OC('miner/ores/redstone_ore') })
-	event.remove({ id: OC('miner/ores/aluminum_ore') })
-	event.remove({ id: OC('miner/ores/tin_ore') })
-	event.remove({ id: OC('miner/ores/silver_ore') })
 	event.remove({ id: MC('diorite') })
 	event.remove({ id: MC('andesite') })
 	event.remove({ id: MC('granite') })
@@ -432,8 +405,6 @@ function unwantedRecipes(event) {
 	event.remove({ input: TE('lightning_charge') })
 	event.remove({ input: TE('ice_charge') })
 	event.remove({ input: TE('earth_charge') })
-	event.remove({ input: "forbidden_arcanus:edelwood_bucket" })
-	event.remove({ output: "forbidden_arcanus:edelwood_bucket" })
 
 	event.remove({ id: 'ravencoffee:croissant' })
 	event.remove({ input: 'ravencoffee:croissant' })
@@ -480,12 +451,10 @@ function tweaks(event) {
 	event.remove({ id: FD("iron_knife") })
 	event.remove({ id: FD("golden_knife") })
 	event.remove({ id: FD("diamond_knife") })
-	event.remove({ id: "buddycards:fd/buddysteel_food_knife" })
 	event.shaped(FD('flint_knife'), ['S ', ' M'], { M: MC("flint"), S: F('#rods/wooden') })
 	event.shaped(FD('iron_knife'), ['S ', ' M'], { M: MC("iron_ingot"), S: F('#rods/wooden') })
 	event.shaped(FD('golden_knife'), ['S ', ' M'], { M: MC("gold_ingot"), S: F('#rods/wooden') })
 	event.shaped(FD('diamond_knife'), ['S ', ' M'], { M: MC("diamond"), S: F('#rods/wooden') })
-	event.shaped("buddycards:buddysteel_food_knife", ['S ', ' M'], { M: "buddycards:buddysteel_ingot", S: F('#rods/wooden') })
 
 	event.remove({id: "decorative_blocks:lattice"})
 	event.shaped("decorative_blocks:lattice", [
@@ -499,9 +468,6 @@ function tweaks(event) {
 
 	event.recipes.createCrushing([Item.of(TE("bitumen")), Item.of(TE("bitumen"), 2).withChance(0.75), Item.of(TE("tar"), 1).withChance(0.75), Item.of(MC("sand")).withChance(0.25)], TE("oil_sand"))
 	event.recipes.createCrushing([Item.of(TE("bitumen")), Item.of(TE("bitumen"), 2).withChance(0.75), Item.of(TE("tar"), 1).withChance(0.75), Item.of(MC("red_sand")).withChance(0.25)], TE("oil_red_sand"))
-
-	event.remove({ id: "forbidden_arcanus:iron_chain" }) // vanilla recipe conflict. what a world we live in
-	event.shapeless(Item.of("forbidden_arcanus:iron_chain", 3), "minecraft:chain")
 
 	event.remove({ id: "computercraft:turtle_advanced" })
 	event.remove({ id: "computercraft:turtle_advanced_upgrade" })
@@ -520,20 +486,6 @@ function tweaks(event) {
 		M: "computercraft:turtle_normal",
 		S: MC('gold_ingot')
 	})
-
-	event.shaped("forbidden_arcanus:eternal_stella", [
-		'PEP',
-		'SDS',
-		'PEP'
-	], {
-		P: "forbidden_arcanus:xpetrified_orb",
-		E: "minecraft:emerald",
-		S: "forbidden_arcanus:stellarite_piece",
-		D: "rubber_duck:rubber_duck_item"
-	})
-
-	donutCraft(event, MC("weeping_vines"), "forbidden_arcanus:rune", MC("twisting_vines"))
-	donutCraft(event, MC("twisting_vines"), "forbidden_arcanus:rune", MC("weeping_vines"))
 
 	event.shaped(AE2('entropy_manipulator'), [
 		'S  ',
@@ -1163,27 +1115,14 @@ function unify(event) {
 	event.recipes.createMilling(TE("copper_dust"), CR("copper_ingot"))
 	event.recipes.createMilling(KJ("zinc_dust"), CR("zinc_ingot"))
 
-	event.replaceInput({ id: OC("ritual/summon_djinni_crusher") }, '#forge:dusts/silver', KJ('zinc_dust'))
 	event.replaceInput({}, '#forge:dusts/quartz', AE2('nether_quartz_dust'))
 	event.replaceOutput({}, TE("quartz_dust"), AE2("nether_quartz_dust"))
 	event.replaceOutput({ id: CR('compat/ae2/milling/gold') }, AE2('gold_dust'), TE('gold_dust'))
 	event.replaceOutput({ id: CR('compat/ae2/milling/iron') }, AE2('iron_dust'), TE('iron_dust'))
-	event.replaceOutput({ id: OC('crushing/iron_dust_from_ingot') }, OC('iron_dust'), TE('iron_dust'))
-	event.replaceOutput({ id: OC('crushing/gold_dust_from_ingot') }, OC('gold_dust'), TE('gold_dust'))
-	event.replaceOutput({ id: OC('crushing/obsidian_dust') }, OC('obsidian_dust'), CR('powdered_obsidian'))
-	event.replaceInput({ id: OC('crafting/chalk_purple_impure') }, OC('obsidian_dust'), CR('powdered_obsidian'))
-	event.replaceInput({ id: OC('ritual/craft_infused_lenses') }, F('#ingots/silver'), TE('nickel_ingot'))
-	event.replaceInput({ id: OC('crafting/magic_lamp_empty') }, F('#ingots/silver'), MC('iron_ingot'))
-	event.replaceInput({ id: OC('crafting/lens_frame') }, F('#ingots/silver'), TE('nickel_ingot'))
 	event.replaceInput({ id: TE('augments/rf_coil_storage_augment') }, F('#ingots/silver'), MC('iron_ingot'))
 	event.replaceInput({ id: TE('augments/rf_coil_xfer_augment') }, F('#ingots/silver'), MC('iron_ingot'))
 	event.replaceInput({ id: TE('augments/rf_coil_augment') }, F('#ingots/silver'), MC('iron_ingot'))
 	event.replaceInput({ id: TE('tools/detonator') }, F('#ingots/silver'), TE('lead_ingot'))
-
-	event.replaceOutput({ type: OC("crushing") }, OC('copper_dust'), TE('copper_dust'))
-	event.replaceOutput({ type: OC("crushing") }, OC('iron_dust'), TE('iron_dust'))
-	event.replaceOutput({ type: OC("crushing") }, OC('gold_dust'), TE('gold_dust'))
-	event.replaceOutput({ type: OC("crushing") }, OC('silver_dust'), TE('silver_dust'))
 
 	event.replaceInput({}, '#forge:plates/iron', CR('iron_sheet'))
 	event.replaceInput({}, '#forge:plates/gold', CR('golden_sheet'))
@@ -1351,18 +1290,12 @@ function oreProcessing(event) {
 	let stone = Item.of(MC("cobblestone"), 1).withChance(.5)
 	let limestone = Item.of("darkerdepths:limestone", 1).withChance(.5)
 	let aridrock = Item.of("darkerdepths:aridrock", 1).withChance(.5)
-	let otherstone = Item.of(OC("otherstone"), 1).withChance(.5)
 
 	event.remove({ input: "darkerdepths:aridrock_gold_ore" })
 	event.remove({ input: "darkerdepths:aridrock_iron_ore" })
 	event.remove({ input: "darkerdepths:limestone_gold_ore" })
 	event.remove({ input: "darkerdepths:limestone_iron_ore" })
 
-	event.recipes.createCrushing([Item.of("forbidden_arcanus:stellarite_piece", 1), Item.of("forbidden_arcanus:stellarite_piece", 1).withChance(.25), stone], "forbidden_arcanus:stella_arcanum")
-	event.recipes.createCrushing([Item.of("forbidden_arcanus:xpetrified_orb", 2), Item.of("forbidden_arcanus:xpetrified_orb", 1).withChance(.25), stone], "forbidden_arcanus:xpetrified_ore")
-	event.recipes.createCrushing([Item.of("buddycards:luminis_crystal", 2), Item.of("buddycards:luminis_crystal", 1).withChance(.25), stone], "buddycards:luminis_ore")
-	event.recipes.createCrushing([Item.of("forbidden_arcanus:arcane_crystal", 2), Item.of("forbidden_arcanus:arcane_crystal_dust", 1).withChance(.25), stone], "forbidden_arcanus:arcane_crystal_ore")
-	event.recipes.createCrushing([Item.of(OC("iesnium_dust"), 2), Item.of(OC("iesnium_dust"), 1).withChance(.25), otherstone], OC("iesnium_ore"))
 	event.recipes.createCrushing([Item.of(TE("sapphire"), 2), Item.of(TE("sapphire"), 1).withChance(.25), stone], TE("sapphire_ore"))
 	event.recipes.createCrushing([Item.of(TE("ruby"), 2), Item.of(TE("ruby"), 1).withChance(.25), stone], TE("ruby_ore"))
 	event.recipes.createCrushing([Item.of(MC("diamond"), 2), Item.of(MC("diamond"), 1).withChance(.25), limestone], "darkerdepths:limestone_diamond_ore")
@@ -1379,10 +1312,6 @@ function oreProcessing(event) {
 	event.recipes.createMilling(['4x ' + MC('redstone')], TE('cinnabar')).processingTime(700)
 	event.recipes.createCrushing(['6x ' + MC('redstone')], TE('cinnabar')).processingTime(500)
 	event.recipes.thermal.pulverizer(['8x ' + MC('redstone')], TE('cinnabar')).energy(10000)
-
-	event.recipes.createMilling(['3x ' + MC('glowstone_dust')], 'buddycards:luminis_crystal').processingTime(700)
-	event.recipes.createCrushing(['6x ' + MC('glowstone_dust')], 'buddycards:luminis_crystal').processingTime(500)
-	event.recipes.thermal.pulverizer(['9x ' + MC('glowstone_dust')], 'buddycards:luminis_crystal').energy(10000)
 
 	event.recipes.createMilling([TE('sulfur_dust')], TE('sulfur')).processingTime(500)
 	event.recipes.createMilling([TE('niter_dust')], TE('niter')).processingTime(500)
@@ -1839,22 +1768,10 @@ function invarMachine(event) {
 			"tool": { "tag": "forge:tools/knives" },
 			"result": [Item.of(KJ(type + "_slimy_fern_leaf"), 2).toResultJson()]
 		})
-		event.custom({
-			"type": "occultism:spirit_fire",
-			"ingredient": { "item": KJ(type + "_slimy_fern_leaf") },
-			"result": { "item": TC(type + "_slime_fern") }
-		})
 		event.custom(ifiniDeploying(KJ(type + "_slimy_fern_leaf", 2), TC(type + "_slime_fern"), "#forge:tools/knives"))
 		event.recipes.createMilling([KJ(type + "_slime_fern_paste")], KJ(type + "_slimy_fern_leaf"))
 		event.campfireCooking(output, KJ(type + "_slime_fern_paste")).cookingTime(300)
 	}
-
-	let fern1 = KJ("ender_slimy_fern_leaf")
-	let fern2 = KJ("sky_slimy_fern_leaf")
-	let fern3 = KJ("earth_slimy_fern_leaf")
-	event.shapeless(fern1, ["forbidden_arcanus:rune", fern2, fern2, fern2, fern2, fern3, fern3, fern3, fern3])
-	event.shapeless(fern2, ["forbidden_arcanus:rune", fern3, fern3, fern3, fern3, fern1, fern1, fern1, fern1])
-	event.shapeless(fern3, ["forbidden_arcanus:rune", fern2, fern2, fern2, fern2, fern1, fern1, fern1, fern1])
 
 	chop("earth", MC('gunpowder'))
 	chop("sky", MC('bone_meal'))
@@ -2680,7 +2597,6 @@ function alchemy(event) {
 	recompact(TE("niter_dust"), TE("niter"))
 	recompact(TE("sapphire_dust"), TE("sapphire"))
 	recompact(TE("ruby_dust"), TE("ruby"))
-	recompact("forbidden_arcanus:arcane_crystal_dust", "forbidden_arcanus:arcane_crystal")
 
 	global.substrates.forEach(a => {
 		a.forEach(e => {

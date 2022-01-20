@@ -14,7 +14,6 @@ let EG = (id, x) => MOD("endergetic", id, x)
 let FD = (id, x) => MOD("farmersdelight", id, x)
 let BOP = (id, x) => MOD("biomesoplenty", id, x)
 let PR_C = (id, x) => MOD("projectred-core", id, x)
-let RQ = (id, x) => MOD("xreliquary", id, x)
 let SD = (id, x) => MOD("storagedrawers", id, x)
 let SP = (id, x) => MOD("supplementaries", id, x)
 let F = (id, x) => MOD("forge", id, x)
@@ -155,19 +154,6 @@ onEvent('item.registry', event => {
 	])
 
 	profession("Hunting", 0x393E46, 0xCF0000, [
-		{ in: RQ('slime_pearl'), out: S(6) },
-		{ in: RQ('catalyzing_gland'), out: S(10) },
-		{ in: RQ('witch_hat'), out: S(15) },
-		{ in: RQ('squid_beak'), out: S(3) },
-		{ in: RQ('withered_rib'), out: S(15) },
-		{ in: RQ('rib_bone'), out: S(5) },
-		{ in: RQ('zombie_heart'), out: S(5) },
-		{ in: RQ('chelicerae'), out: S(5) },
-		{ in: RQ('bat_wing'), out: S(10) },
-		{ in: RQ('frozen_core'), out: S(4) },
-		{ in: RQ('nebulous_heart'), out: S(5) },
-		{ in: RQ('molten_core'), out: S(5) },
-		{ in: RQ('eye_of_the_storm'), out: S(12) },
 		{ in: MC('phantom_membrane'), out: S(8) },
 		{ in: MC('rabbit_foot'), out: S(8) },
 		{ in: MC('nether_star'), out: G(1) },
@@ -513,20 +499,6 @@ onEvent('item.registry', event => {
 		simple("Prismarine Crystals", MC('prismarine_crystals', 4), 24, S, 0x71A296, 0xDCE6D9)
 		
 		entry_cost = 10
-		simple("Witch Hat", RQ('witch_hat', 1), 1, G, 0x424242, 0x568125)
-		simple("Zombie heart", RQ('zombie_heart', 1), 32, S, 0x532B38, 0x8D584A)
-		simple("Squid Beak", RQ('squid_beak', 1), 32, S, 0x00613B, 0x5BCDA1)
-		simple("Rib Bone", RQ('rib_bone', 1), 32, S, 0xDFDDCE, 0xFAF9E9)
-		simple("Catalyzing Gland", RQ('catalyzing_gland', 1), 48, S, 0x268E23, 0x63CA52)
-		simple("Chelicerae", RQ('chelicerae', 1), 32, S, 0x251721, 0x4D0C3B)
-		simple("Slime Pearl", RQ('slime_pearl', 1), 48, S, 0x1B9D33, 0x84F58E)
-		simple("Bat Wing", RQ('bat_wing', 1), 2, G, 0x464646, 0x6D6D6D)
-		simple("Withered Rib", RQ('withered_rib', 1), 2, G, 0x2A2E2E, 0x434949)
-		simple("Molten Core", RQ('molten_core', 1), 48, S, 0xED7102, 0xFAFC58)
-		simple("Eye of the Storm", RQ('eye_of_the_storm', 1), 2, G, 0xFCD607, 0x96FC52)
-		simple("Frozen Core", RQ('frozen_core', 1), 48, S, 0x008DC2, 0x7571FB)
-		simple("Nebulous Heart", RQ('nebulous_heart', 1), 1, G, 0x6200A0, 0xE500C3)
-		simple("Guardian Spike", RQ('guardian_spike', 1), 1, G, 0x7F4215, 0xE29964)
 		simple("Phantom Membrane", MC('phantom_membrane', 1), 48, S, 0x6E506B, 0xC1B79F)
 		simple("Blaze Cake", CR('blaze_cake', 1), 16, S, 0x834141, 0xFCE083)
 		next_group()

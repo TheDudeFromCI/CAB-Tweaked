@@ -41,9 +41,9 @@
     "trapped_chest": true
   },
   "waila": {
-    "show_registry": false,
+    "show_registry": true,
     "show_entity_hp": true,
-    "show_states": false,
+    "show_states": true,
     "show_entities": true
   },
   "storagedrawers": {
