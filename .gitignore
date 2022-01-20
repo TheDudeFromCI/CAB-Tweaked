@@ -25,3 +25,4 @@ usercache.json
 usernamecache.json
 icon.png
 journeymap/**
+config/jei/*.ini
