@@ -230,6 +230,7 @@ onEvent('item.tags', event => {
 		.add(MC('bone_meal'))
 		.add(MC('paper'))
 		.add(FD('raw_pasta'))
+                .add(AP('algal_blend'))
 		.add(FD('tree_bark'))
 		.add(CR('cogwheel'))
 		.add(KJ('sky_slimy_fern_leaf'))
@@ -654,7 +655,8 @@ function tweaks(event) {
 
 	event.remove({ id: "chisel:charcoal/raw" })
 	event.remove({ id: AP("charcoal_block") })
-	event.stonecutting("chisel:charcoal/raw", MC('charcoal'))
+	event.stonecutting("chisel:charcoal/raw", MC('charcoal')) 
+	event.stonecutting(AP("charcoal_block"), MC('charcoal'))
 
 	event.remove({ id: CR('splashing/gravel') })
 	event.recipes.createSplashing([
@@ -669,6 +671,8 @@ function tweaks(event) {
 	], 'minecraft:red_sand')
 
 	event.recipes.createCrushing([Item.of(AC('neptunium_ingot', 2)), Item.of(AC('neptunium_nugget', 5)).withChance(.5)], AC('neptunes_bounty')).processingTime(500)
+
+        donutCraft(event, AP('plating_block', 8), CR('iron_sheet'), MC('stone'))
 
 	event.custom({
 		"type": "thermal:refinery",
