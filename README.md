@@ -1,4 +1,4 @@
 # Above-and-Beyond
-[Forge Modpack] Create's official Challenge-pack  
+A personalized fork of the Create Above & Beyond modpack.
 
-More information on the Project Page: https://www.curseforge.com/minecraft/modpacks/create-above-and-beyond
+Based on the original modpack: https://www.curseforge.com/minecraft/modpacks/create-above-and-beyond
