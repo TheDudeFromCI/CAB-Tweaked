@@ -8,6 +8,7 @@ https://media.forgecdn.net/files/3512/372/appleskin-forge-mc1.16.x-2.2.0.jar
 https://media.forgecdn.net/files/3608/871/appliedenergistics2-8.4.7.jar
 https://media.forgecdn.net/files/3454/318/Aquaculture-1.16.5-2.1.21.jar
 https://media.forgecdn.net/files/3554/751/archers_paradox-1.16.5-1.4.0.1.jar
+https://media.forgecdn.net/files/3414/676/Architects-Palette-1.16.4-1.1.4.jar
 https://media.forgecdn.net/files/3587/404/architectury-1.28.48.jar
 https://media.forgecdn.net/files/3430/455/bwncr-1.16.5-3.10.16.jar
 https://media.forgecdn.net/files/3317/873/BetterAdvancements-1.16.5-0.1.0.108.jar
