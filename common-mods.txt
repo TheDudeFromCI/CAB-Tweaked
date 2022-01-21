@@ -123,6 +123,7 @@ https://media.forgecdn.net/files/3535/644/ProjectRed-1.16.5-4.11.0-beta-6-core.j
 https://media.forgecdn.net/files/3535/646/ProjectRed-1.16.5-4.11.0-beta-6-illumination.jar
 https://media.forgecdn.net/files/3535/645/ProjectRed-1.16.5-4.11.0-beta-6-integration.jar
 https://media.forgecdn.net/files/3535/648/ProjectRed-1.16.5-4.11.0-beta-6-transmission.jar
+https://media.forgecdn.net/files/3498/854/ProperFiniteWater--mc1.16forge--1.01.jar
 https://media.forgecdn.net/files/3131/46/PGA-1.16.4-1.1.2.1.jar
 https://media.forgecdn.net/files/3517/499/PuzzlesLib-v1.0.15-1.16.5-Forge.jar
 https://media.forgecdn.net/files/3532/356/randomium-1.16.5-1.7.jar
