@@ -65,43 +65,6 @@ onEvent('server.datapack.first', event => {
 
 })
 
-onEvent('player.tick', event => {
-
-	// Fixes advanced rocketry not applying low gravity on the moon
-	let player = event.getPlayer()
-
-	if (player.minecraftPlayer.field_70173_aa % 10 != 0)
-		return
-	if (event.world.getDimension() != "custommoon:moon")
-		return
-
-	let effects = java("net.minecraft.potion.Effects")
-	player.getPotionEffects().add(effects.field_204839_B, 20, 0, false, false) // slow fall
-	player.getPotionEffects().add(effects.field_76430_j, 20, 4, false, false) // jump boost
-
-})
-
-onEvent('player.tick', event => {
-
-	// Fixes advanced rocketry not descending their rocket
-	let player = event.getPlayer()
-	if (player.getY() < 700)
-		return
-
-	let riding = player.getRidingEntity()
-	if (!riding)
-		return
-	if (riding.getType() != "advancedrocketry:rocket")
-		return
-
-	let nbt = riding.getFullNBT()
-	if (nbt["flight"] == 0) {
-		nbt["flight"] = 1
-		riding.setFullNBT(nbt)
-	}
-
-})
-
 onEvent('block.place', event => {
 
 	// Auto-configure placed energy "pipez" to extract when near a dynamo

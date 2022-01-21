@@ -27,3 +27,4 @@ icon.png
 journeymap/**
 config/jei/*.ini
 options.txt
+*.bak

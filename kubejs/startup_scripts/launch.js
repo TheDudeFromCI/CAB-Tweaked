@@ -206,7 +206,6 @@ onEvent('block.registry', event => {
 	reagent(0x535353, 0x717171, "gunpowder", "Gunpowder", "minecraft:gunpowder")
 	reagent(0x529680, 0xA2CFC0, "prismarine", "Aquatic", "minecraft:prismarine_shard")
 	category()
-	reagent(0x9E72BE, 0xB7C9D1, "arcane", "Arcane", "forbidden_arcanus:arcane_crystal_dust")
 	reagent(0x27A9BB, 0x2CC7C9, "apatite", "Apatite", "thermal:apatite_dust")
 	reagent(0xC7A94A, 0xEEF071, "sulfur", "Sulfuric", "thermal:sulfur_dust")
 	reagent(0x735A65, 0xB8AFAF, "niter", "Nitric", "thermal:niter_dust")
@@ -296,7 +295,6 @@ onEvent('fluid.registry', event => {
 	event.create('matrix').displayName(`Liquified Computation Matrix`).textureStill('kubejs:fluid/matrix_still').textureFlowing('kubejs:fluid/matrix_flow').bucketColor(colors[0])
 	event.create('fine_sand').displayName(`Fine Sand`).textureStill('kubejs:fluid/fine_sand_still').textureFlowing('kubejs:fluid/fine_sand_flow').bucketColor(0xE3DBB0)
 	event.create('crude_oil').displayName(`Crude Oil`).textureStill('thermal:block/fluids/crude_oil_still').textureFlowing('thermal:block/fluids/crude_oil_flow').bucketColor(0x222118)
-	event.create('liquid_smoke').displayName(`Liquid Smoke`).textureStill('advancedrocketry:blocks/fluid/oxygen_still').textureFlowing('advancedrocketry:blocks/fluid/oxygen_flow').bucketColor(0xEBEBEB)
 })
 
 onEvent('item.modification', event => {

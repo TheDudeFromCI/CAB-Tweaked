@@ -1,7 +1,7 @@
 // priority: 0
 
-settings.logAddedRecipes = true
-settings.logRemovedRecipes = true
+settings.logAddedRecipes = false
+settings.logRemovedRecipes = false
 settings.logSkippedRecipes = false
 settings.logErroringRecipes = true
 
@@ -230,7 +230,7 @@ onEvent('item.tags', event => {
 		.add(MC('bone_meal'))
 		.add(MC('paper'))
 		.add(FD('raw_pasta'))
-                .add(AP('algal_blend'))
+		.add(AP('algal_blend'))
 		.add(FD('tree_bark'))
 		.add(CR('cogwheel'))
 		.add(KJ('sky_slimy_fern_leaf'))
@@ -906,7 +906,6 @@ function barrels(event) {
 
 	smithAndMechCraft("metalbarrels:copper_barrel", MC("barrel"), TC("tinkers_bronze_ingot"))
 	smithAndMechCraft("metalbarrels:iron_barrel", MC("barrel"), "moreminecarts:silica_steel")
-	smithAndMechCraft("metalbarrels:silver_barrel", MC("barrel"), "forbidden_arcanus:rune")
 	smithAndMechCraft("metalbarrels:gold_barrel", MC("barrel"), TC("cobalt_ingot"))
 
 	event.shapeless("metalbarrels:wood_to_copper", ["metalbarrels:copper_barrel"])
@@ -2367,14 +2366,12 @@ function alchemy(event) {
 	alchemy_smelt("prismarine", "volatile", "blue", "cobblestone")
 	alchemy_smelt("obsidian", "volatile", "magenta", "basalt")
 
-	alchemy_mix("arcane", "crystal", "nether", "magenta")
 	alchemy_mix("niter", "crystal", "blaze", "red")
 	alchemy_mix("quartz", "crystal", "gunpowder", "orange")
 	alchemy_mix("sulfur", "crystal", "slime", "yellow")
 	alchemy_mix("apatite", "crystal", "prismarine", "green")
 	alchemy_mix("certus", "crystal", "obsidian", "blue")
 
-	alchemy_smelt("lead", "metal", "arcane", "obsidian")
 	alchemy_smelt("copper", "metal", "niter", "nether")
 	alchemy_smelt("gold", "metal", "quartz", "blaze")
 	alchemy_smelt("nickel", "metal", "sulfur", "gunpowder")
@@ -2382,7 +2379,6 @@ function alchemy(event) {
 	alchemy_smelt("iron", "metal", "certus", "prismarine")
 
 	alchemy_mix("emerald", "gem", "lead", "certus")
-	alchemy_mix("sapphire", "gem", "copper", "arcane")
 	alchemy_mix("diamond", "gem", "gold", "niter")
 	alchemy_mix("lapis", "gem", "nickel", "quartz")
 	alchemy_mix("ruby", "gem", "zinc", "sulfur")

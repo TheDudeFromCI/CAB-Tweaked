@@ -127,7 +127,6 @@ onEvent('item.registry', event => {
 		{ in: TE('ruby', 1), out: S(10) },
 		{ in: MC('diamond', 1), out: S(14) },
 		{ in: MC('coal', 16), out: S(2) },
-		{ in: "16x advancedrocketry:moonturf", out: S(2) }
 	])
 
 	profession("Masonry", 0x5E6F64, 0xBA7967, [

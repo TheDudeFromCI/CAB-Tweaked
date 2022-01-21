@@ -6,12 +6,9 @@
 		"quests": true
 	},
 	"ftblibrary": {
-		"toggle.gamemode": false,
-		"toggle.rain": false,
-		"toggle.day": false,
-		"toggle.night": false
-	},
-	"ftbchunks": {
-		"chunks": true
+		"toggle.gamemode": true,
+		"toggle.rain": true,
+		"toggle.day": true,
+		"toggle.night": true
 	}
 }
