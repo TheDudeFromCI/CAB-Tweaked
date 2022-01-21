@@ -9,7 +9,6 @@ https://media.forgecdn.net/files/3295/196/ChunkAnimator-1.16.5-1.2.4.jar
 https://media.forgecdn.net/files/3403/486/combat_music-1.0.jar
 https://media.forgecdn.net/files/3317/412/ForgeCustomCursorMod-1.2.2.jar
 https://media.forgecdn.net/files/3426/18/drawerfps-2.1.jar
-https://media.forgecdn.net/files/3296/12/FirstPersonMod-2.0.1.jar
 https://media.forgecdn.net/files/3106/798/grid-1.16.4-forge35.0.7-1.6.1.jar
 https://media.forgecdn.net/files/3535/204/guiclock_1.16.5-3.0.jar
 https://media.forgecdn.net/files/3584/996/ItemBorders-1.16.5-1.1.6.jar
