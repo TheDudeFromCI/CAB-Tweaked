@@ -1,12 +1,12 @@
 Write-Output "Clearing existing mod folder."
 if (Test-Path -Path .\mods) {
-    Remove-Item .\mods -Force -Confirm:$false
+    Remove-Item .\mods -Force -Recurse -Confirm:$false
 }
 New-Item -Path .\mods -ItemType Directory
 
 Write-Output "Clearing existing resource pack folder."
 if (Test-Path -Path .\resourcepacks) {
-    Remove-Item .\resourcepacks -Force -Confirm:$false
+    Remove-Item .\resourcepacks -Force -Recurse -Confirm:$false
 }
 New-Item -Path .\resourcepacks -ItemType Directory
 
