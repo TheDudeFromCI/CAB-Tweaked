@@ -76,7 +76,6 @@ https://media.forgecdn.net/files/3482/306/ftb-backups-2.1.2.2.jar
 https://media.forgecdn.net/files/3553/840/ftb-library-forge-1605.3.4-build.90.jar
 https://media.forgecdn.net/files/3575/814/ftb-quests-forge-1605.3.6-build.76.jar
 https://media.forgecdn.net/files/3535/953/ftb-teams-forge-1605.2.3-build.40.jar
-https://media.forgecdn.net/files/3592/997/rsgauges-1.16.5-1.2.13.jar
 https://media.forgecdn.net/files/3564/285/grapplemod-1.16.5-v12.2.jar
 https://media.forgecdn.net/files/3198/17/GunpowderLib-1.16.5-1.2.2.jar
 https://media.forgecdn.net/files/3609/915/Iceberg-1.16.5-1.0.38.jar
@@ -126,10 +125,11 @@ https://media.forgecdn.net/files/3535/645/ProjectRed-1.16.5-4.11.0-beta-6-integr
 https://media.forgecdn.net/files/3535/648/ProjectRed-1.16.5-4.11.0-beta-6-transmission.jar
 https://media.forgecdn.net/files/3131/46/PGA-1.16.4-1.1.2.1.jar
 https://media.forgecdn.net/files/3517/499/PuzzlesLib-v1.0.15-1.16.5-Forge.jar
-https://media.forgecdn.net/files/3532/356/randomium-1.16.5-1
+https://media.forgecdn.net/files/3532/356/randomium-1.16.5-1.7.jar
 https://media.forgecdn.net/files/3453/788/ravencoffee-1.16.5-beta_01.jar
 https://media.forgecdn.net/files/3561/379/repurposed_structures_forge-3.4.7%2B1.16.5.jar
 https://media.forgecdn.net/files/3525/704/rhino-forge-1605.1.5-build.75.jar
+https://media.forgecdn.net/files/3592/997/rsgauges-1.16.5-1.2.13.jar
 https://media.forgecdn.net/files/3474/866/Rubber_Duck-1.16.5-1.2.0.jar
 https://media.forgecdn.net/files/3276/638/Scorge-3.1.3.jar
 https://media.forgecdn.net/files/3364/870/searchlight-1.16-forge-1.1.1.jar
