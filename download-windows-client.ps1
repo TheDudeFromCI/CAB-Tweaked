@@ -20,3 +20,12 @@ foreach($url in Get-Content .\client-mods.txt) {
 }
 Write-Output ""
 
+Write-Output "Cloning additional mods..."
+if (Test-Path -Path .\additional-mods) {
+    foreach($file in Get-ChildItem -Path .\additional-mods -Name) {
+        Write-Output "Copying $file"
+        Copy-Item .\additional-mods\$file -Destination .\mods
+    }
+}
+Write-Output ""
+
