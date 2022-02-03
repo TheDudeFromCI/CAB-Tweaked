@@ -1,3 +1,5 @@
+Set-Location ..
+
 Write-Output "Clearing existing mod folder."
 if (Test-Path -Path .\mods) {
     Remove-Item .\mods -Force -Recurse -Confirm:$false

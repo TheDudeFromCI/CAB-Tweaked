@@ -1,5 +1,7 @@
 #~/bin/bash
 
+cd ..
+
 # Make sure we passed in a download mode.
 if (( $# != 1 )); then
     echo "Unknown number of arguments! Please use as:"

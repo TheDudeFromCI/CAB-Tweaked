@@ -10,13 +10,8 @@
 !kubejs
 !openloader
 !worldshape
-
-!client-mods.txt
-!client-resourcepacks.txt
-!common-mods.txt
-!download-windows-client.ps1
-!download.sh
-!progress_bar.sh
-!update-windows-client.ps1
+!tools
 
 config/jei/*.ini
+*.bak
+
