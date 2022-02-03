@@ -18,7 +18,7 @@ fi
 
 # Download all mods within a mod list.
 function download_mods () {
-    source ../progress_bar.sh
+    source ../tools/progress_bar.sh
     enable_trapping
     setup_scroll_area
 
@@ -45,14 +45,14 @@ mkdir mods
 cd mods
 
 # Download the common mods, first.
-download_mods "../common-mods.txt"
+download_mods "../tools/common-mods.txt"
 
 # Download client mods only in client mode.
 if [[ $1 == client ]]; then
-    download_mods "../client-mods.txt"
+    download_mods "../tools/client-mods.txt"
 
     echo "Copying over additional mods."
-    cp -R additional-mods/. mods/
+    cp -R ../additional-mods/. .
 fi
 
 exit 0
