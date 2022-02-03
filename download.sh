@@ -35,6 +35,7 @@ function download_mods () {
     destroy_scroll_area
 }
 
+
 # Clear mod folder.
 echo "Clearing mod folder, (if exists)"
 rm -rf mods 2>/dev/null
@@ -47,6 +48,9 @@ download_mods "../common-mods.txt"
 # Download client mods only in client mode.
 if [[ $1 == client ]]; then
     download_mods "../client-mods.txt"
+
+    echo "Copying over additional mods."
+    cp -R additional-mods/. mods/
 fi
 
 exit 0
