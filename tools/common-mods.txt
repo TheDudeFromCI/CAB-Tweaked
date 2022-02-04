@@ -1,3 +1,5 @@
 https://media.forgecdn.net/files/3607/578/jei-1.16.5-7.7.1.145.jar
+https://media.forgecdn.net/files/3397/59/journeymap-1.16.5-5.7.3.jar
 https://media.forgecdn.net/files/3625/919/Project_MMO-1.16.5-3.67.5.jar
 https://media.forgecdn.net/files/3172/784/%5b1.16.5%5d%5bForge%5d+RPG-HUD-3.8.4.jar
+https://media.forgecdn.net/files/3556/882/ToastControl-1.16.5-4.4.0.jar
