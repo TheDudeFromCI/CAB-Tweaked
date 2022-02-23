@@ -4,5 +4,5 @@
 	#Allows bubbles from bubble columns to play popping noises.
 	columnsPlaySound = false
 	#Allows normal bubbles to play popping noises.
-	splashesPlaySound = true
+	splashesPlaySound = false
 

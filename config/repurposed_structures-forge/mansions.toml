@@ -1,4 +1,8 @@
 #
+# Only make supports downward if there is land below.
+# (Helps make structure look better in floating island worlds instead of support going down to void at world bottom)
+pillarOnlyToLand = true
+#
 # Average distance between spawn attempts for Repurposed Structures Mansions.
 # 1 for spawning in most chunks and 1001 for none.
 #Range: 1 ~ 1001
@@ -15,8 +19,4 @@ mansionTaigaMaxChunkDistance = 205
 mansionDesertMaxChunkDistance = 225
 #Range: 1 ~ 1001
 mansionSnowyMaxChunkDistance = 225
-#
-# Only make supports downward if there is land below.
-# (Helps make structure look better in floating island worlds instead of support going down to void at world bottom)
-pillarOnlyToLand = true
 
