@@ -8,7 +8,7 @@
     "enableTextToSpeech": false,
     "maxHealthForRender": 40,
     "maxHeartsPerLine": 10,
-    "fluldMode": "SOURCE_ONLY",
+    "fluldMode": "NONE",
     "reachDistance": 0.0
   },
   "overlay": {
