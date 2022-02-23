@@ -13,6 +13,7 @@ https://media.forgecdn.net/files/3574/974/dynamiclightsreforged-mc1.16.5_v1.0.1.
 https://media.forgecdn.net/files/3494/718/EquipmentCompare-1.16.5-1.2.7.jar
 https://media.forgecdn.net/files/3616/68/Fallingleaves-1.16.3-1.2.4.jar
 https://media.forgecdn.net/files/3317/412/ForgeCustomCursorMod-1.2.2.jar
+https://media.forgecdn.net/files/3600/710/GameMenuModOption-1.16.4-1.8.2.jar
 https://media.forgecdn.net/files/3106/798/grid-1.16.4-forge35.0.7-1.6.1.jar
 https://media.forgecdn.net/files/3548/417/iChunUtil-1.16.5-10.5.1.jar
 https://media.forgecdn.net/files/3584/996/ItemBorders-1.16.5-1.1.6.jar
