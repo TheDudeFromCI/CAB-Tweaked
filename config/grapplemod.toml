@@ -184,7 +184,7 @@ wall_jump_side = 0.4
 max_wallrun_time = 3.0
 wallrun_speed = 0.1
 wallrun_max_speed = 0.7
-wallrun_drag = 0.05
+wallrun_drag = 0.01
 wallrun_min_speed = 0.0
 enchant_rarity_wallrun = 0
 [options.enchantments.doublejump]

@@ -7,7 +7,7 @@ if (Test-Path -Path .\mods) {
 New-Item -Path .\mods -ItemType Directory
 
 Write-Output "Downloading common mods..."
-foreach($url in Get-Content .\common-mods.txt) {
+foreach($url in Get-Content .\tools\common-mods.txt) {
     Write-Output "Downloading $url"
     $path = ".\mods\" + $(Split-Path -Path $url -Leaf)
     Invoke-WebRequest -Uri $url -OutFile $path
@@ -15,7 +15,7 @@ foreach($url in Get-Content .\common-mods.txt) {
 Write-Output ""
 
 Write-Output "Downloading client mods..."
-foreach($url in Get-Content .\client-mods.txt) {
+foreach($url in Get-Content .\tools\client-mods.txt) {
     Write-Output "Downloading $url"
     $path = ".\mods\" + $(Split-Path -Path $url -Leaf)
     Invoke-WebRequest -Uri $url -OutFile $path

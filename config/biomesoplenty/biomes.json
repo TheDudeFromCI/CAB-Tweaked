@@ -1,7 +1,7 @@
 {
   "standard_weights": {
     "biomesoplenty:alps": {
-      "weight": 0
+      "weight": 5
     },
     "biomesoplenty:bayou": {
       "weight": 10
@@ -10,7 +10,7 @@
       "weight": 1
     },
     "biomesoplenty:cold_desert": {
-      "weight": 0
+      "weight": 7
     },
     "biomesoplenty:coniferous_forest": {
       "weight": 10
@@ -37,7 +37,7 @@
       "weight": 5
     },
     "biomesoplenty:jade_cliffs": {
-      "weight": 3
+      "weight": 1
     },
     "biomesoplenty:lavender_field": {
       "weight": 3
@@ -46,7 +46,7 @@
       "weight": 1
     },
     "biomesoplenty:marsh": {
-      "weight": 0
+      "weight": 7
     },
     "biomesoplenty:meadow": {
       "weight": 7
@@ -141,6 +141,10 @@
       "rarity": 1.0
     },
     "biomesoplenty:deep_bayou": {
+      "weight": 100,
+      "rarity": 1.0
+    },
+    "biomesoplenty:dense_marsh": {
       "weight": 100,
       "rarity": 1.0
     },
@@ -249,7 +253,7 @@
       "rarity": 0.75
     },
     "biomesoplenty:tundra_basin": {
-      "weight": 0,
+      "weight": 100,
       "rarity": 1.5
     },
     "biomesoplenty:tundra_bog": {
@@ -314,7 +318,7 @@
       "weight": 3
     },
     "minecraft:mountains": {
-      "weight": 6
+      "weight": 10
     },
     "minecraft:nether_wastes": {
       "weight": 10

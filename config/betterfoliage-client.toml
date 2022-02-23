@@ -19,5 +19,5 @@
 	#Range: 0.0 ~ 7.0
 	leavesVariationDistance = 2.75
 	#Force Forge Lighting Pipeline? (should be true when not using Optifine)
-	forceForgeLighting = false
+	forceForgeLighting = true
 
