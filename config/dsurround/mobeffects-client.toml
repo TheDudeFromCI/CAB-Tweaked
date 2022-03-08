@@ -19,7 +19,7 @@
 	#Allowed Values: SHOE, SQUARE, HORSESHOE, BIRD, PAW, SQUARE_SOLID, LOWRES_SQUARE
 	"Player Footprint Style" = "LOWRES_SQUARE"
 	#Generate footsteps as a quadruped (horse)
-	"Footsteps as Quadruped" = false
+	"Footsteps as Quadruped" = true
 	#Footstep master volume scale
 	#Range: 0 ~ 100
 	"Footstep Volume Scale" = 40
@@ -37,7 +37,7 @@
 	#Show breath effect in cold regions and underwater
 	"Show Breath Effect" = true
 	#Show arrow particle trail during flight
-	"Show Arrow Particle Trail" = false
+	"Show Arrow Particle Trail" = true
 	#Enable toolbar item sound effects
 	"Enable Toolbar Sound Effects" = true
 	#Enable bow/crossbow sound effects

@@ -4,7 +4,7 @@
 	addButton = true
 	#The x-position of the GUI button
 	#Range: -10000 ~ 10000
-	buttonX = 0
+	buttonX = 102
 	#The y-position of the GUI button
 	#Range: -10000 ~ 10000
 	buttonY = -22

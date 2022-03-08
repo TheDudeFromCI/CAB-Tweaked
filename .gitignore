@@ -11,6 +11,7 @@
 !openloader
 !worldshape
 !tools
+!scripts
 
 config/jei/*.ini
 *.bak

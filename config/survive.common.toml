@@ -13,7 +13,7 @@
 	#-------------------------------------------
 	#Default: true
 	#-------------------------------------------
-	"Boolean: Hypothermia/Hyperthermia Allows Sleep" = true
+	"Boolean: Hypothermia/Hyperthermia Allows Sleep" = false
 	#
 	############################################
 	#This determines the mode used when deciding the temperature
@@ -161,7 +161,7 @@
 	#-------------------------------------------
 	#Default: true
 	#-------------------------------------------
-	"Boolean: Enable Armor Weights" = true
+	"Boolean: Enable Armor Weights" = false
 	#
 	############################################
 	#Adds stamina exhaustion from interacting with blocks
@@ -228,7 +228,7 @@
 	#-------------------------------------------
 	#Default: false
 	#-------------------------------------------
-	"Boolean: Enable Hygiene (Beta)" = true
+	"Boolean: Enable Hygiene (Beta)" = false
 
 [Nutrition]
 	#
@@ -238,7 +238,7 @@
 	#-------------------------------------------
 	#Default: false
 	#-------------------------------------------
-	"Boolean: Enable Nutrition (Beta)" = true
+	"Boolean: Enable Nutrition (Beta)" = false
 
 ["Well Being"]
 	#
@@ -248,7 +248,7 @@
 	#-------------------------------------------
 	#Default: false
 	#-------------------------------------------
-	"Boolean: Enable Well Being (Beta)" = true
+	"Boolean: Enable Well Being (Beta)" = false
 
 [Micellaneous]
 	#
