@@ -13,7 +13,7 @@
 	#-------------------------------------------
 	#Default: 5
 	#-------------------------------------------
-	"Temperature Bar Y Position" = 5
+	"Temperature Bar Y Position" = 6
 	#
 	############################################
 	#Change the texture of the temperature bar when you have hypothermia or hyperthermia
@@ -32,7 +32,7 @@
 	#Default: HOTBAR
 	#-------------------------------------------
 	#Allowed Values: HOTBAR, NUMBERS, HORIZONTAL_BAR, VERTICAL_BAR
-	"Enum: Temperature Display Mode" = "NUMBERS"
+	"Enum: Temperature Display Mode" = "HORIZONTAL_BAR"
 	#
 	############################################
 	#If Enabled, temperature will be displayed in fahrenheit if the display mode is set to NUMBERS
