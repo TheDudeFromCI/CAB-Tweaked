@@ -22,6 +22,7 @@ https://media.forgecdn.net/files/3412/586/BetterStrongholds-1.16.4-1.2.1.jar
 https://media.forgecdn.net/files/3360/574/BiomesOPlenty-1.16.5-13.1.0.477-universal.jar
 https://media.forgecdn.net/files/3529/457/catalogue-1.5.0-1.16.5.jar
 https://media.forgecdn.net/files/3601/708/CBMultipart-1.16.5-3.0.4.123-universal.jar
+https://media.forgecdn.net/files/3670/779/cc-tweaked-1.16.5-1.100.3.jar
 https://media.forgecdn.net/files/3214/651/charm-forge-1.16.5-2.3.2.jar
 https://media.forgecdn.net/files/3492/379/Chimes-1.0.0-1.16.5.jar
 https://media.forgecdn.net/files/3376/782/Chisel-MC1.16.5-2.0.1-alpha.4.jar
@@ -98,6 +99,9 @@ https://media.forgecdn.net/files/3653/199/performant-1.16.2-5-3.88m.jar
 https://media.forgecdn.net/files/3536/806/Placebo-1.16.5-4.6.1.jar
 https://media.forgecdn.net/files/3472/990/PrettyPipes-1.9.5.jar
 https://media.forgecdn.net/files/3569/545/Project_MMO-1.16.5-3.67.2.jar
+https://media.forgecdn.net/files/3639/374/ProjectRed-1.16.5-4.11.0-core.jar
+https://media.forgecdn.net/files/3639/375/ProjectRed-1.16.5-4.11.0-integration.jar
+https://media.forgecdn.net/files/3639/379/ProjectRed-1.16.5-4.11.0-transmission.jar
 https://media.forgecdn.net/files/3498/854/ProperFiniteWater--mc1.16forge--1.01.jar
 https://media.forgecdn.net/files/3517/499/PuzzlesLib-v1.0.15-1.16.5-Forge.jar
 https://media.forgecdn.net/files/3642/325/Quark-r2.4-322.jar
