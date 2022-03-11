@@ -15,4 +15,4 @@
 
 config/jei/*.ini
 *.bak
-
+*.zip
